@@ -1,6 +1,5 @@
 function[] = FinalProject()
 
-%this is a test
 
 global vendor;
 vendor.length = 0;
