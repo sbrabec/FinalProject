@@ -246,7 +246,7 @@ vendor.FinalAnswerDisplay.String = output;
 
 end
 
-function[] = converttoExcel(~,~)
+function[] = converttoExcel()
 
 solveforForce()
 global vendor
@@ -257,4 +257,6 @@ fprintf(fid,'%s\n',[num2str(vendor.Ta0),',', num2str(vendor.Fa0x),',', num2str(v
     num2str(vendor.Fa1x),',', num2str(vendor.Fa1y),',', num2str(vendor.Fb1x),',', ...
     num2str(vendor.Fb1y),',', num2str(vendor.Fb0x),',' num2str(vendor.Fb0y),',']);
 fclose(fid);
+dlmwrite(filename,[AppliedTorque(1:N),Force on a0 x-dir(1:N),Force on a0 y-dir(1:N), ...
+    Force on a1 x-dir(1:N)],'append');
 end
