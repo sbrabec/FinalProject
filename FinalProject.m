@@ -17,80 +17,71 @@ vendor.R3 = 0;
 
 vendor.fig = figure('numbertitle','off','name','Force Analysis');
 
-vendor.LengthDisplayMessage = uicontrol('style','text','units','normalized',...
-    'position', [.034 .90 .09 .095],'string','Input Length and angle in radians','horizontalalignment','right');
-
 vendor.LengthWDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .80 .09 .095],'string','Input length W','horizontalalignment','right');
 
 vendor.W1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .80 .09 .05],'string','edit','horizontalalignment','right');
+    [.15 .80 .09 .05],'horizontalalignment','right');
 
 vendor.LengthVDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .70 .09 .095],'string','Input length V','horizontalalignment','right');
 
 vendor.V1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .70 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.15 .70 .09 .05],'horizontalalignment','right');
 
 vendor.LengthUDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .60 .09 .095],'string','Input length U','horizontalalignment','right');
 
 vendor.U1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .60 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.15 .60 .09 .05],'horizontalalignment','right');
 
 vendor.LengthLDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .50 .09 .095],'string','Input length L','horizontalalignment','right');
 
 vendor.L1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .50 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.15 .50 .09 .05],'horizontalalignment','right');
 
 vendor.LengthGDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .40 .09 .095],'string','Input length G','horizontalalignment','right');
 
 vendor.G1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .40 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.15 .40 .09 .05],'horizontalalignment','right');
 
 vendor.Lengthm1Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .80 .09 .095],'string','Input m1','horizontalalignment','right');
 
 vendor.m1 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .80 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.35 .80 .09 .05],'horizontalalignment','right');
 
 vendor.Lengthm2Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .70 .09 .095],'string','Input m2','horizontalalignment','right');
 
 vendor.m2 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .70 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.35 .70 .09 .05],'horizontalalignment','right');
 
 vendor.Lengthm3Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .60 .09 .095],'string','Input m3','horizontalalignment','right');
 
 vendor.m3 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .60 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.35 .60 .09 .05],'horizontalalignment','right');
 
 vendor.LengthR1Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .50 .09 .095],'string','Input length R1','horizontalalignment','right');
 
 vendor.R1 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .50 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.35 .50 .09 .05],'horizontalalignment','right');
 
 vendor.LengthR2Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .40 .09 .095],'string','Input length R2','horizontalalignment','right');
 
 vendor.R2 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .40 .09 .05],'string','edit','horizontalalignment','right');
+    [.35 .40 .09 .05],'horizontalalignment','right');
 
 vendor.LengthR3Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .30 .09 .095],'string','Input length R3','horizontalalignment','right');
 
 vendor.R3 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .30 .09 .05],'string','edit','horizontalalignment','right');
-
-vendor.CenterDisplayMessage = uicontrol('style','text','units','normalized',...
-    'position', [.034 .90 .09 .095],'string','Input location of center of mass','horizontalalignment','right');
-
-vendor.MassDisplayMessage = uicontrol('style','text','units','normalized',...
-    'position', [.034 .90 .09 .095],'string','Input link mass','horizontalalignment','right');
+    [.35 .30 .09 .05],'horizontalalignment','right');
 
 vendor.answer = uicontrol('style','text','units','normalized',...
     'position', [.40 .90 .09 .095],'string','Final Answer','horizontalalignment','right');
@@ -98,7 +89,6 @@ vendor.answer = uicontrol('style','text','units','normalized',...
 vendor.solve = uicontrol('style','pushbutton','units','normalized',...
     'position',[.20 .007 .14 .05],'string','solve','callback',...
     {@solveforForce});
-
 
 vendor.FinalAnswerDisplay = uicontrol('style','text','units','normalized','position',...
     [.50 0 .50 1],'horizontalalignment','right');

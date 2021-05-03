@@ -24,55 +24,55 @@ vendor.LengthWDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .80 .09 .095],'string','Input length W','horizontalalignment','right');
 
 vendor.W1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .80 .09 .05],'string','edit','horizontalalignment','right');
+    [.15 .80 .09 .05],'horizontalalignment','right');
 
 vendor.LengthVDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .70 .09 .095],'string','Input length V','horizontalalignment','right');
 
 vendor.V1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .70 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.15 .70 .09 .05],'horizontalalignment','right');
 
 vendor.LengthUDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .60 .09 .095],'string','Input length U','horizontalalignment','right');
 
 vendor.U1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .60 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.15 .60 .09 .05],'horizontalalignment','right');
 
 vendor.LengthLDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .50 .09 .095],'string','Input length L','horizontalalignment','right');
 
 vendor.L1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .50 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.15 .50 .09 .05],'horizontalalignment','right');
 
 vendor.LengthGDisplay = uicontrol('style','text','units','normalized',...
     'position', [.034 .40 .09 .095],'string','Input length G','horizontalalignment','right');
 
 vendor.G1 = uicontrol('style','edit','units','normalized','position',...
-    [.15 .40 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.15 .40 .09 .05],'horizontalalignment','right');
 
 vendor.Lengthm1Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .80 .09 .095],'string','Input m1','horizontalalignment','right');
 
 vendor.m1 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .80 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.35 .80 .09 .05],'horizontalalignment','right');
 
 vendor.Lengthm2Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .70 .09 .095],'string','Input m2','horizontalalignment','right');
 
 vendor.m2 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .70 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.35 .70 .09 .05],'horizontalalignment','right');
 
 vendor.Lengthm3Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .60 .09 .095],'string','Input m3','horizontalalignment','right');
 
 vendor.m3 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .60 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.35 .60 .09 .05],'horizontalalignment','right');
 
 vendor.LengthR1Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .50 .09 .095],'string','Input length R1','horizontalalignment','right');
 
 vendor.R1 = uicontrol('style','edit','units','normalized','position',...
-    [.35 .50 .09 .05],'string', 'edit','horizontalalignment','right');
+    [.35 .50 .09 .05],'horizontalalignment','right');
 
 vendor.LengthR2Display = uicontrol('style','text','units','normalized',...
     'position', [.25 .40 .09 .095],'string','Input length R2','horizontalalignment','right');
@@ -246,7 +246,7 @@ vendor.FinalAnswerDisplay.String = output;
 
 end
 
-function[] = converttoExcel()
+function[] = converttoExcel(~,~)
 
 solveforForce()
 global vendor
@@ -257,6 +257,4 @@ fprintf(fid,'%s\n',[num2str(vendor.Ta0),',', num2str(vendor.Fa0x),',', num2str(v
     num2str(vendor.Fa1x),',', num2str(vendor.Fa1y),',', num2str(vendor.Fb1x),',', ...
     num2str(vendor.Fb1y),',', num2str(vendor.Fb0x),',' num2str(vendor.Fb0y),',']);
 fclose(fid);
-dlmwrite(filename,[AppliedTorque(1:N),Force on a0 x-dir(1:N),Force on a0 y-dir(1:N), ...
-    Force on a1 x-dir(1:N)],'append');
 end
