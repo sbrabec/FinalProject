@@ -6,4 +6,4 @@ a force analysis problem for kinematics, so all the values needed should be give
 the problem, but it should be able to solve for any number values that the user
 inputs, just by pushing the solve button after filling in each edit box. The other
 button turns the values into a .csv file that must be opened by pushing the force
-analysis.csv file in the folder.
+analysis.c
